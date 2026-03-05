@@ -684,6 +684,8 @@ class File(Blob):
         if endings:
             endings = str(endings)
 
+        super().__init__(blob_parts=blob_parts, content_type=content_type, endings=endings)
+
         is_single_item = not _is_iterable(blob_parts)
         if is_single_item:
             # Inherit the content_type and lastModified if we have a
