@@ -9,6 +9,7 @@ from workers import WorkerEntrypoint
 
 class WorkerEntrypointExample(WorkerEntrypoint):
     def __init__(self, state, env):
+        super().__init__(state, env)
         self.state = state
         self.counter = 0
 
